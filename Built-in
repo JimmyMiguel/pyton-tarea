@@ -1,0 +1,13 @@
+''
+Crea un script que le pida al usuario una lista de países (separados por comas). Éstos se deben almacenar en una lista. No debería haber países repetidos (haz uso de set). Finalmente, muestra por consola la lista de países ordenados alfabéticamente y separados por comas.
+'''
+
+
+paises = input('escribe cinco paises que conozcas, separa cada pais por comas:  ')
+
+lista = paises.split(',')
+
+eliminar_repetidos = set(lista)    
+
+print(sorted(eliminar_repetidos))
+
