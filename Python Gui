@@ -1,0 +1,43 @@
+'''
+En este segundo ejercicio, tendréis que crear una interfaz sencilla la cual debe de contener una lista de elementos seleccionables, también debe de tener un label con el texto que queráis.
+'''
+
+import tkinter
+from tkinter import ttk
+
+root = tkinter.Tk()
+
+root.columnconfigure(0,weight=1)
+root.columnconfigure(0,weight=5)
+
+
+
+
+label= tkinter.Label(root, text='Selecione sus alimentos favoritos', fg='black',bg='white', width=30,border=10,borderwidth=20)
+label.grid(column=0,row=0,sticky=tkinter.N)
+https://github.com/JimmyMiguel/pyton-tarea
+
+
+
+lista = ['Verduras','Carnes', 'Lacteos', 'Mariscos']
+
+guardado = tkinter.StringVar(value=lista)
+
+
+comidas = tkinter.Listbox(root, height=5, listvariable= guardado)
+
+
+comidas.grid(column=0,row=1,sticky=tkinter.N)
+
+
+
+
+
+
+
+boton = tkinter.Button(root, text='Enviar',fg='black',bg='white', width=10,border=10 )
+boton.grid(column=0, row=6, sticky=tkinter.W)
+
+
+
+root.mainloop()
